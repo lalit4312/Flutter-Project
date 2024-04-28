@@ -5,6 +5,7 @@ import 'package:batch_32b/screen/colums_screen.dart';
 import 'package:batch_32b/screen/container_screen.dart';
 import 'package:batch_32b/screen/dashboard_screen.dart';
 import 'package:batch_32b/screen/fexible_expanded_screen.dart';
+import 'package:batch_32b/screen/list_tile_screen.dart';
 import 'package:batch_32b/screen/navigate_screen.dart';
 import 'package:batch_32b/screen/rows_column_screen.dart';
 import 'package:batch_32b/screen/simple_interest.dart';
@@ -18,7 +19,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: RowAndColumnScreen(),
+      home: ListTileScreen(),
     );
   }
 }
