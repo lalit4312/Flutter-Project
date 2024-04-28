@@ -1,5 +1,8 @@
 import 'package:batch_32b/model/simple_interest_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
 
 class SimpleInterest extends StatefulWidget {
   const SimpleInterest({super.key});
@@ -44,11 +47,18 @@ class _SimpleInterestScreenState extends State<SimpleInterest> {
                   Principle = double.parse(value);
                 },
                 keyboardType: TextInputType.number,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
+                decoration: InputDecoration(
+                  // border: OutlineInputBorder(
+                  //     borderRadius: BorderRadius.all(Principle.circular(10.0)),
+                  //     enabledBoarder: OutlineInputBorder(
+                  //       borderSide: BorderSide(color: Colors.red),
+                  //     ),
+                  //     focusedBorder: OutlineInputBorder(
+                  //         borderSide: BorderSide(color: Colors.green))),
                   labelText: 'Enter principle',
                 ),
               ),
+
               const SizedBox(height: 8),
               TextFormField(
                 validator: (value) {
@@ -115,6 +125,49 @@ class _SimpleInterestScreenState extends State<SimpleInterest> {
                   fontSize: 30,
                 ),
               ),
+
+              RichText(
+                text: const TextSpan(
+                    // text: 'M',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue,
+                    ),
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: 'M',
+                        style: TextStyle(
+                          color: Colors.red,
+                          fontSize: 30,
+                        ),
+                      ),
+                      TextSpan(
+                        text: 'y name is Lalit',
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      )
+                    ]),
+              ),
+              RichText(
+                  text: const TextSpan(
+                      text: 'Hello',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 30,
+                      ),
+                      children: <TextSpan>[
+                    TextSpan(
+                      text: ' bold ',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.red,
+                      ),
+                    ),
+                    TextSpan(
+                      text: 'world!',
+                    )
+                  ])),
             ],
           ),
         ),
